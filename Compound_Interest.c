@@ -1,29 +1,11 @@
- #include <stdio.h>
-#include <math.h>
-
-int main() {
-    // Declare variables
-    double principal, rate, time, compoundInterest;
-
-    // Input principal, rate, and time
-   
-    scanf("%lf", &principal);
-
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    double p,r,t,cp;
+    scanf("%lf%lf%lf",&p,&r,&t);
+    r=r/100;
+    cp=p*(pow((1+r),t)-1);
+    printf("%.2lf",cp);
     
-    scanf("%lf", &rate);
-
- 
-    scanf("%lf", &time);
-
-    // Convert rate to decimal form
-    rate = rate / 100;
-
-    // Calculate compound interest
-    compoundInterest = principal * (pow((1 + rate), time) - 1);
-
-    // Display the result
-    printf("%.2lf
-", compoundInterest);
-
-    return 0;
 }
